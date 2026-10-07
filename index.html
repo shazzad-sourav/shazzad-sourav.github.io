@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shazzad Sakim Sourav - Data Analyst and Machine Learning Portfolio</title>
+<meta name="description" content="Portfolio of Shazzad Sakim Sourav: Junior Database Analyst with projects in data analytics, computer vision, robotics, and sensor data. Toronto, ON.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shazzad Sakim Sourav - Portfolio">
+<meta property="og:description" content="Data analytics, computer vision, and robotics projects with results and limitations documented.">
+<meta name="theme-color" content="#10151C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310151C'/%3E%3Ctext x='32' y='44' font-family='Arial' font-size='34' font-weight='700' text-anchor='middle' fill='%236FE3C2'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14181F; --body:#3B4350; --muted:#4A5260; --paper:#F3F4F1; --panel:#FFFFFF; --band:#E8EBE5;
+  --line:#D9DCD5; --rule:#C9CDC4; --tint:#EDF3F0;
+  --dark:#10151C; --dark-text:#F3F4F1; --dark-soft:#C9D1DC; --dark-muted:#A9B3C1; --dark-line:#2A3340; --dark-border:#4A5566;
+  --accent:#0B6E5B; --accent-hover:#074B3E; --mint:#6FE3C2;
+  --display:'Bricolage Grotesque',sans-serif; --sans:'IBM Plex Sans',sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+a:hover{color:var(--accent-hover)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.dark a:focus-visible{outline-color:var(--mint)}
+h1,h2,h3,p,ul{margin:0}
+section[id],footer[id]{scroll-margin-top:12px}
+
+.skip{position:absolute;left:12px;top:-60px;background:var(--mint);color:var(--dark);padding:12px 16px;border-radius:8px;font-weight:600;text-decoration:none;z-index:10}
+.skip:focus{top:12px}
+
+.wrap{max-width:1120px;margin:0 auto}
+.label{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.dark .label{color:var(--mint)}
+.h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.01em}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:720px}
+
+/* hero */
+.dark{background:var(--dark);color:var(--dark-text)}
+.hero{padding:0 32px}
+.hero .wrap{display:flex;flex-direction:column;gap:72px;padding:24px 0 88px}
+.topnav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px}
+.brand{font-family:var(--mono);font-size:14px;color:var(--dark-muted)}
+.topnav ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:4px 8px}
+.topnav a{color:var(--dark-text);text-decoration:none;min-height:44px;display:inline-flex;align-items:center;padding:0 12px;font-size:15px}
+.topnav a:hover{color:var(--mint)}
+.intro{display:flex;flex-direction:column;gap:28px;max-width:860px}
+.intro h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,84px);line-height:1.02;letter-spacing:-.02em}
+.intro .lead{font-size:clamp(18px,2.2vw,22px);line-height:1.5;color:var(--dark-soft)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{min-height:48px;display:inline-flex;align-items:center;padding:0 22px;border-radius:8px;text-decoration:none;color:var(--dark-text);border:1px solid var(--dark-border)}
+.btn:hover{border-color:var(--mint);color:var(--mint)}
+.btn.primary{background:var(--mint);color:var(--dark);border-color:var(--mint);font-weight:600}
+.btn.primary:hover{background:#9AF0D9;color:var(--dark)}
+.stats{display:flex;flex-wrap:wrap;gap:32px 56px;border-top:1px solid var(--dark-line);padding-top:32px}
+.stat{display:flex;flex-direction:column;gap:4px}
+.stat b{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--mint)}
+.stat span{font-size:14px;color:var(--dark-muted)}
+
+/* work */
+#work{padding:88px 32px 40px}
+#work .wrap,#experience .wrap,#skills .wrap{display:flex;flex-direction:column;gap:40px}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{flex:1 1 480px;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.card.soft{background:var(--band)}
+.card .tag{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-family:var(--display);font-weight:700;font-size:26px;line-height:1.15}
+.card p{color:var(--body)}
+.card .result{padding:14px 16px;background:var(--tint);border-radius:8px;font-size:15px;color:var(--ink)}
+.card .result strong{font-weight:600}
+.card ul{padding-left:20px;color:var(--body);display:flex;flex-direction:column;gap:10px}
+.card ul strong{font-weight:600;color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:auto}
+.links a{min-height:44px;display:inline-flex;align-items:center;font-weight:500}
+
+/* experience */
+#experience{padding:56px 32px 88px}
+.row{display:flex;flex-wrap:wrap;gap:12px 40px;padding:28px 0;border-top:1px solid var(--rule)}
+.row:last-child{border-bottom:1px solid var(--rule)}
+.when{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:4px}
+.when .date{font-family:var(--mono);font-size:14px;color:var(--muted)}
+.when .place{font-size:15px;color:var(--muted)}
+.what{flex:3 1 460px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.what h3{font-family:var(--display);font-weight:700;font-size:22px}
+.what p{color:var(--body)}
+
+/* skills */
+#skills{background:var(--band);padding:88px 32px}
+.cols{display:flex;flex-wrap:wrap;gap:32px 40px}
+.col{flex:1 1 240px;min-width:0;display:flex;flex-direction:column;gap:12px}
+.col h3{font-family:var(--mono);font-weight:500;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.col p{color:var(--body)}
+
+/* education */
+#education{padding:88px 32px}
+#education .wrap{display:flex;flex-wrap:wrap;gap:40px}
+.edu{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.edu h3{font-family:var(--display);font-weight:700;font-size:22px}
+.edu span.sub{color:var(--muted)}
+.edu .item{display:flex;flex-direction:column;gap:4px}
+
+/* contact */
+#contact{padding:88px 32px}
+#contact .wrap{display:flex;flex-direction:column;gap:28px}
+#contact h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.01em;max-width:760px}
+
+@media (max-width:640px){
+  .hero{padding:0 20px}
+  .hero .wrap{gap:48px;padding-bottom:64px}
+  #work{padding:56px 20px 24px}
+  #experience{padding:40px 20px 56px}
+  #skills,#education,#contact{padding:56px 20px}
+  .card{padding:24px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip to projects</a>
+
+<header class="dark hero">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Main">
+      <span class="brand">Shazzad Sakim Sourav</span>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="intro">
+      <span class="label">Portfolio / Toronto, ON</span>
+      <h1>Shazzad Sakim Sourav</h1>
+      <p class="lead">Junior Database Analyst at Partners in Credit, working with SQL, secure SFTP data pipelines, and reconciliation. MSc in Computational Science, with projects in computer vision, robotics, and sensor data.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:sourav.shazzad@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/shazzadsourav/">LinkedIn</a>
+        <a class="btn" href="https://github.com/shazzad-sourav">GitHub</a>
+        <a class="btn" href="https://public.tableau.com/app/profile/shazzad.sakim.sourav/viz/FraudDetectionAnalyticsDashboard/Dashboard1">Tableau dashboard</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>3+</b><span>years in data analysis</span></div>
+      <div class="stat"><b>10</b><span>financial partners' data pipelines</span></div>
+      <div class="stat"><b>10%</b><span>less fabric wastage from a model I built</span></div>
+      <div class="stat"><b>IEEE</b><span>DICTA 2020 co-author</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Selected work</span>
+      <h2 class="h2" id="work-h">Projects with the results, and the limits, written down</h2>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Tableau / Python / pandas</span>
+        <h3>Mobile Money Fraud Risk Analysis</h3>
+        <p>An interactive dashboard on the synthetic PaySim dataset showing where fraud concentrates by transaction type, amount, and time. A pandas script keeps all 8,213 fraud cases and samples 200,000 legitimate rows.</p>
+        <p class="result"><strong>Result:</strong> fraud appears only in TRANSFER (19.60%) and CASH_OUT (5.53%) in the sample. Sampling inflates these rates compared with the full dataset.</p>
+        <div class="links">
+          <a href="https://public.tableau.com/app/profile/shazzad.sakim.sourav/viz/FraudDetectionAnalyticsDashboard/Dashboard1">Open dashboard</a>
+          <a href="https://github.com/shazzad-sourav/fraud-analytics-tableau-paysim">View code</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Python / PyTorch / time series</span>
+        <h3>IMU Distance Estimation for a Mobile Robot</h3>
+        <p>Estimates how far a Direct Drive Diablo robot drove from a phone's accelerometer and gyroscope. Compares double integration, a constant-speed baseline, Random Forest, SVR, and a CNN-GRU using run-grouped cross-validation.</p>
+        <p class="result"><strong>Result:</strong> about 0.35 m error (7%) on held-out 5 m runs versus 3.03 m for double integration. On an unseen 27 m recording the learned models underestimated by 10 to 14%.</p>
+        <div class="links">
+          <a href="https://github.com/shazzad-sourav/imu-distance-estimation">View code and results</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">ROS 2 / OpenCV / YOLOv8 / Gazebo</span>
+        <h3>Autonomous Mobile Robotics</h3>
+        <p>Three course projects: ArUco landmark mapping and navigation on a TurtleBot3 in Gazebo and a physical AgileX LIMO, OpenCV versus YOLOv8 for arrow-marker recognition, and camera-only cone avoidance.</p>
+        <p class="result"><strong>Result:</strong> on the LIMO the robot found all four markers and computed their centroid. Its final turn failed, and the write-up documents why.</p>
+        <div class="links">
+          <a href="https://github.com/shazzad-sourav/autonomous-mobile-robotics">View code</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">Python / OpenCV / classical vision</span>
+        <h3>Traffic Light Detection</h3>
+        <p>A classical baseline that finds red, green, and yellow traffic lights using HSV color masks and Hough circle detection, with a Tkinter interface for batch processing. Adapted from an open-source approach.</p>
+        <div class="links">
+          <a href="https://github.com/shazzad-sourav/TrafficLightDetectorConventional">View code</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="tag">PyTorch / deep learning / IEEE DICTA 2020</span>
+        <h3>MixCaps: Capsules with Iteration-Free Routing</h3>
+        <p>A capsule-network routing method that removes iterative routing, reaching 94.8% accuracy on CIFAR-10 with fewer parameters and less memory. Co-authored and published at IEEE DICTA 2020.</p>
+        <div class="links">
+          <a href="https://doi.org/10.1109/DICTA51227.2020.9363386">Read the paper</a>
+        </div>
+      </article>
+
+      <article class="card soft">
+        <span class="tag">Earlier work</span>
+        <h3>From my undergraduate years</h3>
+        <ul>
+          <li><strong>IntelTrack:</strong> real-time deep learning tracking of lab animals, with heatmaps and pose estimates for pharmaceutical research.</li>
+          <li><strong>NimbleNav:</strong> aerial-image mapping for GPS-denied robot navigation, plus an encrypted mesh network for multi-robot communication.</li>
+          <li><strong>Embedding Visualizers and Bangla Sentiment Analysis:</strong> small NLP experiments.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Experience</span>
+      <h2 class="h2" id="exp-h">Data, machine learning, and product delivery</h2>
+    </div>
+
+    <div>
+      <div class="row">
+        <div class="when"><span class="date">Mar 2026 to present</span><span class="place">Thornhill, ON</span></div>
+        <div class="what">
+          <h3>Junior Database Analyst, Partners in Credit Inc.</h3>
+          <p>Manage secure SFTP data pipelines with 10 financial partners. Write and optimize SQL for reporting, validate and reconcile sensitive datasets against privacy standards, and build Excel KPI dashboards that are ready for audit.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when"><span class="date">Jan 2022 to Nov 2023</span><span class="place">Dhaka, Bangladesh</span></div>
+        <div class="what">
+          <h3>Data Analyst and AI Engineer, Sadia Stylewear Ltd.</h3>
+          <p>Built predictive models for procurement timing and pricing, and a statistical optimization system that reduced fabric wastage by 10%. Also built and validated a computer-vision attendance system.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when"><span class="date">Nov 2020 to Nov 2021</span><span class="place">Dhaka, Bangladesh</span></div>
+        <div class="what">
+          <h3>Product Engineer and Team Lead, Antopolis Designs and Technologies</h3>
+          <p>Led a team of four (backend, frontend, and UI/UX) to deliver a full-stack facial-recognition attendance system. Designed the database schema and backend APIs, and tested API endpoints with Postman.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when"><span class="date">2018 to 2023</span><span class="place">Dhaka, Bangladesh</span></div>
+        <div class="what">
+          <h3>Embedded systems, robotics, and research</h3>
+          <p>Independent contractor building sensor-based embedded and robotics systems on Arduino and Raspberry Pi, and undergraduate research assistant in computer vision and robotics at North South University.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">Skills</span>
+      <h2 class="h2" id="skills-h">What I work with</h2>
+    </div>
+    <div class="cols">
+      <div class="col"><h3>Data and BI</h3><p>SQL (joins, window functions), Python (Pandas, NumPy, Statsmodels), Excel, IBM Cognos, Power BI, Tableau, data validation and reconciliation</p></div>
+      <div class="col"><h3>Machine learning and vision</h3><p>PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, time-series modelling, deep learning</p></div>
+      <div class="col"><h3>Robotics and embedded</h3><p>ROS 2, LIMO, TurtleBot 3, Parrot SDK, Arduino, Raspberry Pi, sensor integration</p></div>
+      <div class="col"><h3>Cloud and delivery</h3><p>Azure (Data Lake, Data Factory, SQL), Google Cloud, Git, Postman, Agile and Scrum</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" aria-label="Education and credentials">
+  <div class="wrap">
+    <div class="edu">
+      <span class="label">Education</span>
+      <div class="item"><h3>MSc, Computational Science</h3><span class="sub">Laurentian University, 2024 to 2025</span></div>
+      <div class="item"><h3>BSc, Computer Science and Engineering</h3><span class="sub">North South University, 2015 to 2020</span></div>
+    </div>
+    <div class="edu">
+      <span class="label">Credentials</span>
+      <div class="item"><h3>IBM Data Analyst Professional Certificate</h3><span class="sub">Through the NPower Canada Junior Data Analyst Program, 2026</span></div>
+      <div class="item"><h3>Microsoft Azure AI-900</h3><span class="sub">Azure AI Fundamentals</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact" class="dark">
+  <div class="wrap">
+    <span class="label">Contact</span>
+    <h2>Looking for data analyst and applied machine learning roles in Toronto.</h2>
+    <div class="actions">
+      <a class="btn primary" href="mailto:sourav.shazzad@gmail.com">sourav.shazzad@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/shazzadsourav/">LinkedIn</a>
+      <a class="btn" href="https://github.com/shazzad-sourav">GitHub</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
