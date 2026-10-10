@@ -166,6 +166,16 @@ section[id],footer[id]{scroll-margin-top:12px}
 
     <div class="cards">
       <article class="card">
+        <span class="tag">Python / LangGraph / Gemini / RAG</span>
+        <h3>Bank Churn Analyst Agent</h3>
+        <p>An LLM agent that answers business questions about the same 10,127 customers. It decides which tools to use: it writes and runs read-only SQL, searches the project docs (Chroma RAG), and stops for human approval before exporting a call list. Every answer shows the SQL behind it.</p>
+        <p class="result"><strong>Result:</strong> 26 of 27 evaluation questions passed (96%), scored automatically against an answer key checked in pytest. The one miss reported two groups separately instead of combined. When the main model ran out of free quota, fallback models kept every question answered.</p>
+        <div class="links">
+          <a href="https://github.com/shazzad-sourav/bank-churn-agent">View code and eval</a>
+        </div>
+      </article>
+
+      <article class="card">
         <span class="tag">Power BI / DAX / Power Query</span>
         <h3>Credit Card Customer Churn</h3>
         <p>A three-page Power BI report on 10,127 bank credit card customers: an overview, the behavioural drivers of churn, and a retention watchlist built from a transparent six-rule risk score.</p>
@@ -286,7 +296,7 @@ section[id],footer[id]{scroll-margin-top:12px}
     </div>
     <div class="cols">
       <div class="col"><h3>Data and BI</h3><p>SQL (joins, window functions), Python (Pandas, NumPy, Statsmodels), Excel, IBM Cognos, Power BI, Tableau, data validation and reconciliation</p></div>
-      <div class="col"><h3>Machine learning and vision</h3><p>PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, time-series modelling, deep learning</p></div>
+      <div class="col"><h3>Machine learning, vision and LLM agents</h3><p>PyTorch, TensorFlow, scikit-learn, OpenCV, YOLO, time-series modelling, LangChain / LangGraph, RAG (Chroma), Gemini API</p></div>
       <div class="col"><h3>Robotics and embedded</h3><p>ROS 2, LIMO, TurtleBot 3, Parrot SDK, Arduino, Raspberry Pi, sensor integration</p></div>
       <div class="col"><h3>Cloud and delivery</h3><p>Azure (Data Lake, Data Factory, SQL), Google Cloud, Git, Postman, Agile and Scrum</p></div>
     </div>
